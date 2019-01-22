@@ -1,8 +1,9 @@
 {
-  "presets": [["env", {"modules": false}], "react"],
-  "env": {
-    "test": {
-      "presets": [["env"], "react"]
-    }
-  }
+  "presets": ["env", "react", "stage-0"],
+  "plugins": [
+    ["transform-runtime", {
+      "polyfill": false,
+      "regenerator": true
+    }]
+  ]
 }
